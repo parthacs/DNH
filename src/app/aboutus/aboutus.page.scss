@@ -1,0 +1,36 @@
+.aboutus-content {
+  --background: #f8f9fa;
+}
+
+.aboutus-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 24px 12px 12px 12px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+  color: #222;
+}
+
+.subtitle {
+  color: #888;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+ion-card {
+  margin-bottom: 18px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+ion-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.schedule-btn {
+  margin-top: 12px;
+}

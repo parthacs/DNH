@@ -1,0 +1,45 @@
+<app-header></app-header>
+
+<ion-content [fullscreen]="true" class="aboutus-content">
+  <div class="aboutus-container">
+    <h2>About Us</h2>
+    <p class="subtitle">Learn more about our app and team</p>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Our App</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        Welcome to our home maintenance and task management application. We help homeowners stay organized, track maintenance tasks, and learn valuable information about home care through our comprehensive educational resources.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Contact Information</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list lines="none">
+          <ion-item>
+            <ion-icon name="person-outline" slot="start"></ion-icon>
+            <ion-label>John Smith - Founder &amp; Developer</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="mail-outline" slot="start"></ion-icon>
+            <ion-label>contactexample.com</ion-label>
+          </ion-item>
+          <ion-item>
+            <ion-icon name="call-outline" slot="start"></ion-icon>
+            <ion-label>(123) 456-7890</ion-label>
+          </ion-item>
+        </ion-list>
+        <ion-button expand="block" color="primary" class="schedule-btn">
+          <ion-icon name="calendar-outline" slot="start"></ion-icon>
+          Schedule Visit
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+<app-footer></app-footer>
