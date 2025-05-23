@@ -1,0 +1,121 @@
+ion-content {
+  --background: rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-task-modal {
+  background: #fff;
+  border-radius: 10px;
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 32px 28px 24px 28px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #222;
+  }
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #444;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+
+  label {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #222;
+  }
+
+  input[type="text"],
+  input[type="date"],
+  textarea,
+  select {
+    border: 1.5px solid #bfc7d1;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    background: #fafbfc;
+    transition: border-color 0.2s;
+  }
+
+  input[type="text"]:focus,
+  input[type="date"]:focus,
+  textarea:focus,
+  select:focus {
+    border-color: #2196F3;
+    background: #fff;
+  }
+
+  textarea {
+    min-height: 60px;
+    resize: vertical;
+  }
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancel-btn {
+  background: none;
+  border: none;
+  color: #666;
+  font-size: 1rem;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.cancel-btn:hover {
+  background: #f2f2f2;
+}
+
+.add-btn {
+  background: #2196F3;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 8px 22px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.add-btn:hover {
+  background: #1769aa;
+} 

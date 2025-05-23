@@ -1,82 +1,205 @@
+// Variables
+:host {
+  --primary-color: #2196F3;
+  --text-color: #333333;
+  --secondary-text: #666666;
+  --background-color: #F5F5F5;
+  --card-background: #FFFFFF;
+  --border-radius: 12px;
+  --spacing-unit: 16px;
+}
+
+ion-content {
+  --background: var(--background-color);
+}
+
+ion-header {
+  ion-toolbar {
+    --background: var(--card-background);
+    --border-color: transparent;
+    
+    ion-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-color);
+    }
+  }
+}
+
 .tasks-container {
-  max-width: 400px;
+  max-width: 600px;
   margin: 0 auto;
-  padding: 16px 0 80px 0;
+  padding: var(--spacing-unit);
+}
+
+.header-section {
+  margin-bottom: var(--spacing-unit);
 }
 
 .tasks-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0 0 4px 0;
 }
 
 .tasks-count {
-  color: var(--ion-color-medium);
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
+  margin: 0;
+}
+
+.custom-searchbar {
+  --background: var(--card-background);
+  --border-radius: var(--border-radius);
+  --box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin-bottom: var(--spacing-unit);
+  
+  &::part(searchbar-input) {
+    font-size: 0.95rem;
+  }
 }
 
 .filters {
   display: flex;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  gap: 12px;
+  margin-bottom: var(--spacing-unit);
+  overflow-x: auto;
+  padding: 4px 0;
+  -webkit-overflow-scrolling: touch;
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.filter-item {
+  flex-shrink: 0;
+}
+
+.filter-button {
+  --border-color: rgba(33, 150, 243, 0.2);
+  --border-radius: 20px;
+  --border-width: 1px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  height: 36px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-transform: none;
+  letter-spacing: 0;
+  
+  ion-icon {
+    font-size: 18px;
+    color: var(--primary-color);
+    
+    &[name="chevron-down-outline"] {
+      font-size: 16px;
+      margin-left: 4px;
+    }
+  }
+  
+  &:hover {
+    --background: rgba(33, 150, 243, 0.05);
+  }
+  
+  &:active {
+    --background: rgba(33, 150, 243, 0.1);
+  }
 }
 
 .task-list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-unit);
 }
 
 .task-card {
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  --background: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  margin: 0;
 }
 
 .task-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.task-info {
+  flex: 1;
+  margin-right: 12px;
 }
 
 .task-title {
   font-size: 1.1rem;
-  font-weight: 500;
-  margin: 0 0 0.25rem 0;
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 4px 0;
 }
 
 .task-desc {
-  color: var(--ion-color-medium);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  color: var(--secondary-text);
   margin: 0;
+  line-height: 1.4;
 }
 
 .task-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 4px;
 }
 
-.task-action {
-  font-size: 1.2rem;
-  color: var(--ion-color-medium);
-  cursor: pointer;
-}
-
-.task-action.delete {
-  color: var(--ion-color-danger);
+.action-button {
+  --padding-start: 4px;
+  --padding-end: 4px;
+  height: 32px;
+  
+  ion-icon {
+    font-size: 20px;
+    color: var(--secondary-text);
+  }
+  
+  &.delete ion-icon {
+    color: #FF5252;
+  }
 }
 
 .task-meta {
   display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem;
-  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 ion-badge {
+  --background: rgba(33, 150, 243, 0.1);
+  --color: var(--primary-color);
   font-size: 0.85rem;
-  border-radius: 8px;
-  padding: 4px 8px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 4px;
+  
+  ion-icon {
+    font-size: 16px;
+  }
+  
+  &.category {
+    --background: rgba(158, 158, 158, 0.1);
+    --color: var(--secondary-text);
+  }
+}
+
+ion-fab-button {
+  --background: var(--primary-color);
+  --background-activated: var(--primary-color);
+  --background-hover: var(--primary-color);
+  --box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
 } 

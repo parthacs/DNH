@@ -1,0 +1,42 @@
+<app-header></app-header>
+<ion-content>
+  <div class="add-task-modal">
+    <div class="modal-header">
+      <h2>Add New Task</h2>
+      <button class="close-btn" (click)="close()">&times;</button>
+    </div>
+    <form (ngSubmit)="addTask()">
+      <div class="form-group">
+        <label for="taskName">Task Name</label>
+        <input id="taskName" type="text" [(ngModel)]="task.name" name="name" placeholder="Enter task name" required />
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" [(ngModel)]="task.description" name="description" placeholder="Enter task details"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="dueDate">Due Date</label>
+        <input id="dueDate" type="date" [(ngModel)]="task.dueDate" name="dueDate" placeholder="dd-mm-yyyy" />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="priority">Priority</label>
+          <select id="priority" [(ngModel)]="task.priority" name="priority">
+            <option *ngFor="let p of priorities">{{p}}</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <select id="category" [(ngModel)]="task.category" name="category">
+            <option *ngFor="let c of categories">{{c}}</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="button" class="cancel-btn" (click)="cancel()">Cancel</button>
+        <button type="submit" class="add-btn">Add Task</button>
+      </div>
+    </form>
+  </div>
+</ion-content>
+<app-footer></app-footer> 

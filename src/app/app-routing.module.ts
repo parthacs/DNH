@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'aboutus',
     loadChildren: () => import('./aboutus/aboutus.module').then(m => m.AboutusPageModule)
+  },
+  {
+    path: 'add-task',
+    loadChildren: () => import('./add-task/add-task.module').then(m => m.AddTaskPageModule)
   }
 ];
 
