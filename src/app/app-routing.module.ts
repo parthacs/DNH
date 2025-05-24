@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'edit-task',
     loadChildren: () => import('./edit-task/edit-task.module').then(m => m.EditTaskPageModule)
+  },
+  {
+    path: 'learn',
+    loadChildren: () => import('./learn/learn.module').then(m => m.LearnPageModule)
   }
 ];
 

@@ -1,0 +1,22 @@
+<app-header></app-header>
+<ion-content class="learn-content">
+  <div class="learn-container">
+    <h1 class="learn-title">Education Hub</h1>
+    <div class="learn-subtitle">Learn about home maintenance and care</div>
+    <div class="education-list">
+      <ion-card class="education-card" *ngFor="let item of educationItems" [routerLink]="['/learn/details']">
+        <ion-card-content>
+          <div class="education-row">
+            <ion-icon [name]="item.icon" class="education-icon"></ion-icon>
+            <div class="education-info">
+              <div class="education-title">{{item.title}}</div>
+              <div class="education-desc">{{item.desc}}</div>
+              <span class="education-tag" [ngClass]="item.tagClass">{{item.tag}}</span>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+<app-footer></app-footer> 
