@@ -1,14 +1,33 @@
-ion-header, ion-toolbar {
-  --background: #fff;
-  --color: #222;
-}
-.edit-task-content {
-  --background: #fff;
-  padding: 24px 24px 12px 24px;
+.edit-task-modal {
+  background: #fff;
   border-radius: 12px;
   max-width: 420px;
   margin: 40px auto;
+  padding: 32px 28px 24px 28px;
   box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+  position: relative;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.modal-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #444;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 4px;
 }
 .form-group {
   display: flex;
@@ -51,16 +70,17 @@ textarea {
 }
 .cancel-btn {
   background: none;
-  border: none;
+  border: 1.5px solid #bfc7d1;
   color: #666;
   font-size: 1rem;
   padding: 8px 18px;
   border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s, border-color 0.2s;
 }
 .cancel-btn:hover {
   background: #f2f2f2;
+  border-color: #2196F3;
 }
 .save-btn {
   background: #2196F3;

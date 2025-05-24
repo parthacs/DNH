@@ -1,15 +1,8 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Edit Task</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="close()">
-        <ion-icon name="close-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content class="edit-task-content">
+<div class="edit-task-modal">
+  <div class="modal-header">
+    <h2>Edit Task</h2>
+    <button class="close-btn" (click)="close()">&times;</button>
+  </div>
   <form [formGroup]="editTaskForm" (ngSubmit)="saveChanges()">
     <div class="form-group">
       <label for="taskName">Task Name</label>
@@ -42,4 +35,4 @@
       <button type="submit" class="save-btn" [disabled]="!editTaskForm.valid">Save Changes</button>
     </div>
   </form>
-</ion-content> 
+</div> 

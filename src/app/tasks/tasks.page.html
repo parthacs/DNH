@@ -38,18 +38,18 @@
     </div>
 
     <div class="task-list">
-      <ion-card class="task-card">
+      <ion-card class="task-card" *ngFor="let task of tasks">
         <ion-card-content>
           <div class="task-header">
             <div class="task-info">
-              <h3 class="task-title">Test smoke detectors</h3>
-              <p class="task-desc">Press the test button on each detector to ensure it works</p>
+              <h3 class="task-title">{{task.name}}</h3>
+              <p class="task-desc">{{task.description}}</p>
             </div>
             <div class="task-actions">
               <ion-button fill="clear" class="action-button">
                 <ion-icon name="checkmark-outline"></ion-icon>
               </ion-button>
-              <ion-button fill="clear" class="action-button">
+              <ion-button fill="clear" class="action-button" (click)="openEditTaskModal(task)">
                 <ion-icon name="create-outline"></ion-icon>
               </ion-button>
               <ion-button fill="clear" class="action-button delete">
@@ -60,43 +60,11 @@
           <div class="task-meta">
             <ion-badge class="due-date">
               <ion-icon name="calendar-outline"></ion-icon>
-              May 22, 2025
+              {{task.dueDate | date:'MMM d, y'}}
             </ion-badge>
             <ion-badge class="category">
-              <ion-icon name="home-outline"></ion-icon>
-              Interior
-            </ion-badge>
-          </div>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card class="task-card">
-        <ion-card-content>
-          <div class="task-header">
-            <div class="task-info">
-              <h3 class="task-title">Replace HVAC filter</h3>
-              <p class="task-desc">Replace with a new 16x20x1 filter</p>
-            </div>
-            <div class="task-actions">
-              <ion-button fill="clear" class="action-button">
-                <ion-icon name="checkmark-outline"></ion-icon>
-              </ion-button>
-              <ion-button fill="clear" class="action-button">
-                <ion-icon name="create-outline"></ion-icon>
-              </ion-button>
-              <ion-button fill="clear" class="action-button delete">
-                <ion-icon name="trash-outline"></ion-icon>
-              </ion-button>
-            </div>
-          </div>
-          <div class="task-meta">
-            <ion-badge class="due-date">
-              <ion-icon name="calendar-outline"></ion-icon>
-              May 24, 2025
-            </ion-badge>
-            <ion-badge class="category">
-              <ion-icon name="settings-outline"></ion-icon>
-              Systems
+              <ion-icon [name]="task.category === 'Interior' ? 'home-outline' : (task.category === 'Systems' ? 'settings-outline' : 'earth-outline')"></ion-icon>
+              {{task.category}}
             </ion-badge>
           </div>
         </ion-card-content>
