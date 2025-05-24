@@ -35,3 +35,13 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/* Modal Styles */
+.add-task-modal-class {
+  --background: transparent !important;
+  --backdrop-opacity: 0.5;
+}
+
+.add-task-modal-class::part(content) {
+  background: transparent;
+}

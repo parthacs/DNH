@@ -1,20 +1,99 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header></app-header>
+<ion-content [fullscreen]="true" class="home-content">
+  <div class="dashboard-container">
+    <div class="dashboard-title-row">
+      <h1 class="dashboard-title">Home Dashboard</h1>
+      <div class="dashboard-date">Thursday, May 22</div>
+    </div>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div class="tasks-section">
+      <div class="section-header">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span>Today's Tasks</span>
+      </div>
+      <ion-card class="task-card">
+        <ion-card-content>
+          <div class="task-row">
+            <div class="task-info">
+              <div class="task-title">Test smoke detectors</div>
+              <div class="task-desc">Press the test button on each detector to ensure it works</div>
+              <div class="task-badges">
+                <ion-badge class="due-badge">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  May 22, 2025
+                </ion-badge>
+                <ion-badge class="category-badge">
+                  <ion-icon name="home-outline"></ion-icon>
+                  Interior
+                </ion-badge>
+              </div>
+            </div>
+            <div class="task-actions-row">
+              <ion-icon name="checkmark-outline" class="action-icon"></ion-icon>
+              <ion-icon name="create-outline" class="action-icon"></ion-icon>
+              <ion-icon name="trash-outline" class="action-icon delete"></ion-icon>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <div class="tasks-section">
+      <div class="section-header">
+        <ion-icon name="calendar-outline"></ion-icon>
+        <span>Upcoming Tasks</span>
+      </div>
+      <ion-card class="task-card">
+        <ion-card-content>
+          <div class="task-row">
+            <div class="task-info">
+              <div class="task-title">Replace HVAC filter</div>
+              <div class="task-desc">Replace with a new 16x20x1 filter</div>
+              <div class="task-badges">
+                <ion-badge class="due-badge">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  May 24, 2025
+                </ion-badge>
+                <ion-badge class="category-badge">
+                  <ion-icon name="settings-outline"></ion-icon>
+                  Systems
+                </ion-badge>
+              </div>
+            </div>
+            <div class="task-actions-row">
+              <ion-icon name="checkmark-outline" class="action-icon"></ion-icon>
+              <ion-icon name="create-outline" class="action-icon"></ion-icon>
+              <ion-icon name="trash-outline" class="action-icon delete"></ion-icon>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <ion-card class="task-card">
+        <ion-card-content>
+          <div class="task-row">
+            <div class="task-info">
+              <div class="task-title">Clean gutters</div>
+              <div class="task-desc">Remove debris from all gutters and check for damage</div>
+              <div class="task-badges">
+                <ion-badge class="due-badge">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  May 27, 2025
+                </ion-badge>
+                <ion-badge class="category-badge">
+                  <ion-icon name="home-outline"></ion-icon>
+                  Exterior
+                </ion-badge>
+              </div>
+            </div>
+            <div class="task-actions-row">
+              <ion-icon name="checkmark-outline" class="action-icon"></ion-icon>
+              <ion-icon name="create-outline" class="action-icon"></ion-icon>
+              <ion-icon name="trash-outline" class="action-icon delete"></ion-icon>
+            </div>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
 </ion-content>
+<app-footer></app-footer>
